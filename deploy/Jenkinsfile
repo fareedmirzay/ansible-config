@@ -28,9 +28,8 @@ pipeline {
     stage('Package') {
       steps {
         script {
-          sh 'echo Packaging App"'
+          sh 'echo Packaging App" '
         }
-
       }
     }
 
