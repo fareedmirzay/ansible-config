@@ -28,7 +28,7 @@ pipeline {
     stage('Package') {
       steps {
         script {
-          sh 'echo packaging App"'
+          sh 'echo Packaging App"'
         }
 
       }
@@ -42,7 +42,7 @@ pipeline {
       }
     }
 
-    stage('clean Up') {
+    stage("clean Up") {
       steps {
         cleanWs()
         }
