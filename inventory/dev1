@@ -1,7 +1,0 @@
-[nginx]
-44.222.203.51 ansible_ssh_user='ec2-user'
-
-
-[db]
-54.221.32.99 ansible_ssh_user='ubuntu'
-
