@@ -1,2 +1,10 @@
 ---
 # defaults file for nginx
+- name: install PHP
+  ansible.builtin.yum:
+    name:
+      - php
+      - php-mysqlnd
+      - php-gd
+      - php-curl
+    state: present
