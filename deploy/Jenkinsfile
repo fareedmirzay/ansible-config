@@ -96,43 +96,15 @@
 
 
 pipeline {
-    agent any  // Use any available agent
+    agent any
 
-    stages {
-        stage('Checkout') {
-            steps {
-                // Checkout the source code from the repository
-                git url: 'https://github.com/fareedmirzay/ansible-config.git', branch: 'feature/jenkinspipeline-stages'
-            }
+  stages {
+    stage('Build') {
+      steps {
+        script {
+          sh 'echo "Building Stage"'
         }
-        
-        stage('Build') {
-            steps {
-              script {
-                sh 'echo "Building Stage"'
-              }
-            }
-        }
-        
-        stage('Test') {
-            steps {
-              script {
-                sh 'echo "Testing Stage"'
-              }
-                
-            }
-        }
+      }
     }
-    post {
-        success {
-            echo 'Build and tests succeeded!'
-        }
-        failure {
-            echo 'Build or tests failed.'
-        }
-        always {
-            // Steps that are always run regardless of success or failure
-            echo 'Cleaning up...'
-        }
     }
 }
