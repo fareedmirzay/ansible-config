@@ -1,7 +1,7 @@
 #### Dependences to be installed
 ====================================
-- yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-- yum install -y dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+- yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+- yum install -y dnf-utils http://rpms.remirepo.net/enterprise/remi-release-9.rpm
 - yum install python3 python3-pip wget unzip git -y
 - python3 -m pip install --upgrade setuptools
 - python3 -m pip install --upgrade pip
@@ -17,9 +17,6 @@
 vi .bash_profile 
 
 ##### paste the below in the bash profile
-export JAVA_HOME=$(dirname $(dirname $(readlink $(readlink $(which javac)))))
-export PATH=$PATH:$JAVA_HOME/bin
-export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
 
 ##### reload the bash profile
 source ~/.bash_profile

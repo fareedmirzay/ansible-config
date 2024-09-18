@@ -1,10 +1,6 @@
-[nginx]
-44.222.203.51 ansible_ssh_user='ec2-user'
-
-
 [db]
-54.221.32.99 ansible_ssh_user='ubuntu'
+54.84.181.174 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/etc/ansible/accessKeys
 
-// [todo]
-// 172.31.6.147 ansible_ssh_user='ec2-user'
 
+[nginx]
+54.224.143.141 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/etc/ansible/accessKeys
