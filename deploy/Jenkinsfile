@@ -2,6 +2,15 @@ pipeline {
     agent any
 
   stages {
+  stages{
+      stage("Initial cleanup") {
+          steps {
+            dir("${WORKSPACE}") {
+              deleteDir()
+            }
+          }
+        }
+
     stage('Build') {
       steps {
         script {
@@ -45,7 +54,6 @@ pipeline {
 }
 
 
-// pipeline {
 //   agent any
 
 //   environment {
@@ -90,22 +98,6 @@ pipeline {
 
 
 // pipeline {
-//     agent any
-
-//   stages {
-//     stage('Build') {
-//       steps {
-//         script {
-//           sh 'echo "Building Stage"'
-//         }
-//       }
-//     }
-//     }
-// }
-
-
-
-// pipeline {
 //   agent any
 
 //   environment {
@@ -116,14 +108,14 @@ pipeline {
 //       string(name: 'inventory', defaultValue: 'dev',  description: 'This is the inventory file for the environment to deploy configuration')
 //     }
 
-//   stages{
-//       stage("Initial cleanup") {
-//           steps {
-//             dir("${WORKSPACE}") {
-//               deleteDir()
-//             }
-//           }
-//         }
+  // stages{
+  //     stage("Initial cleanup") {
+  //         steps {
+  //           dir("${WORKSPACE}") {
+  //             deleteDir()
+  //           }
+  //         }
+  //       }
 
 //       stage('Checkout SCM') {
 //          steps{
