@@ -2,13 +2,22 @@
     agent any
 
   stages {
+<<<<<<< HEAD
     stage("Initial cleanup") {
+=======
+  stages{
+      stage("Initial cleanup") {
+>>>>>>> origin/feature/jenkinspipeline-stages
           steps {
             dir("${WORKSPACE}") {
               deleteDir()
             }
           }
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feature/jenkinspipeline-stages
     stage('Build') {
       steps {
         script {
@@ -52,7 +61,10 @@
 }
 
 
+<<<<<<< HEAD
 // pipeline {
+=======
+>>>>>>> origin/feature/jenkinspipeline-stages
 //   agent any
 
 //   environment {
@@ -63,6 +75,10 @@
 //       string(name: 'inventory', defaultValue: 'dev',  description: 'This is the inventory file for the environment to deploy configuration')
 //     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feature/jenkinspipeline-stages
 //       stage('Checkout SCM') {
 //          steps{
 //             git branch: 'feature/jenkinspipeline-stages', url: 'https://github.com/fareedmirzay/ansible-config.git'
@@ -94,6 +110,7 @@
 
 
 
+<<<<<<< HEAD
 
 // pipeline {
 //     agent any
@@ -110,6 +127,8 @@
 // }
 
 
+=======
+>>>>>>> origin/feature/jenkinspipeline-stages
 
 // pipeline {
 //   agent any
@@ -122,14 +141,14 @@
 //       string(name: 'inventory', defaultValue: 'dev',  description: 'This is the inventory file for the environment to deploy configuration')
 //     }
 
-//   stages{
-//       stage("Initial cleanup") {
-//           steps {
-//             dir("${WORKSPACE}") {
-//               deleteDir()
-//             }
-//           }
-//         }
+  // stages{
+  //     stage("Initial cleanup") {
+  //         steps {
+  //           dir("${WORKSPACE}") {
+  //             deleteDir()
+  //           }
+  //         }
+  //       }
 
 //       stage('Checkout SCM') {
 //          steps{

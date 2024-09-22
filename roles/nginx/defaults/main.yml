@@ -1,6 +1,7 @@
 ---
 # defaults file for nginx
 
+<<<<<<< HEAD
 - name: install PHP
   ansible.builtin.yum:
     name:
@@ -9,3 +10,6 @@
       - php-gd
       - php-curl
     state: present
+=======
+
+>>>>>>> origin/feature/jenkinspipeline-stages

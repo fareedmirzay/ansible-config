@@ -4,8 +4,7 @@
   ansible.builtin.yum:
       name: nginx
       state: present
-
-
+      
 - name: ensure nginx is started and enabled
   ansible.builtin.service:
      name: nginx
